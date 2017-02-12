@@ -4,7 +4,8 @@ import Devtools from 'mobx-react-devtools';
 
 import { TodoView } from './todoview.component';
 import { RenderCounter } from './counter.component';
-import { ObservableTodoStore, TodoItem } from '../state/todos.state';
+import { ObservableTodoStore } from '../state/todos.state';
+import { TodoItem } from '../state/todo-item.state';
 
 @inject("store")
 @observer
