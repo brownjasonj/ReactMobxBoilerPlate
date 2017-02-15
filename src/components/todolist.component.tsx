@@ -15,7 +15,7 @@ class TodoList extends React.Component<any, any> {
   }
 
   render() {
-    const store = this.props.store;
+    const store : ObservableTodoStore = this.props.store;
     console.log(store);
     return (
       <div>
