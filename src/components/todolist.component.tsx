@@ -3,20 +3,18 @@ import { observer, inject } from 'mobx-react';
 import Devtools from 'mobx-react-devtools';
 
 import { TodoView } from './todoview.component';
-import { RenderCounter } from './counter.component';
 import { ObservableTodoStore } from '../state/todos.state';
 import { TodoItem } from '../state/todo-item.state';
 
+interface Props {
+  store?: ObservableTodoStore;
+}
+
 @inject("store")
 @observer
-class TodoList extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
+class TodoList extends React.Component<Props, {}> {
   render() {
-    const store : ObservableTodoStore = this.props.store;
-    console.log(store);
+    const store = this.props.store;
     return (
       <div>
         <Devtools />

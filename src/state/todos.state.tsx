@@ -1,7 +1,6 @@
 import * as mobx from 'mobx';
 import { observable, computed, action } from 'mobx';
 
-import { Counter } from './counter.state';
 import { TodoItem } from './todo-item.state';
 
 class ObservableTodoStore {

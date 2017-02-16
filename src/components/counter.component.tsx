@@ -3,14 +3,13 @@ import { observer, inject } from 'mobx-react';
 
 import { Counter } from '../state/counter.state';
 
+interface Props {
+    counter: Counter;
+}
 @observer
-class RenderCounter extends React.Component<any, any> {
-    constructor(props : any) {
-        super(props);
-    }
-
+class RenderCounter extends React.Component<Props, {}> {
     render() {
-        const counter: Counter = this.props.counter;
+        const counter = this.props.counter;
         return (
             <div>{counter.count}</div>
         );
